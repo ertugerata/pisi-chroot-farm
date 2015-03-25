@@ -2,8 +2,6 @@
 FROM ertugerata/pisi-chroot-base
 MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
 
-ADD bashrc /root/.bashrc
-
 WORKDIR /root
 
 RUN /sbin/start-stop-daemon -b --start  --pidfile /var/run/dbus/pid --exec /usr/bin/dbus-daemon -- --system
