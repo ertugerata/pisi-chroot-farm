@@ -38,4 +38,5 @@ RUN pisi it --ignore-safety --ignore-dependency autoconf \
             python-iniparse \ 
             strace \
             yacc \
-            
+
+RUN pisi dc
