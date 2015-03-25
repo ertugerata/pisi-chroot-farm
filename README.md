@@ -6,18 +6,12 @@ docker base img for packaging
 
 ### Pull image to you docker
 
-    docker pull ertugerata/pisichroot
+    docker pull ertugerata/pisi-chroot-farm
     
 ### Run a container with sh
 
-    docker run -it ertugerata/pisichroot bash
+    docker run -it ertugerata/pisi-chroot-farm bash
 
 ### Usage container with Pisi
 
-    docker run ertugerata/pisichroot pisi info 'foo'
-    
-### Files
-
-- sha1sums
-- LICENSE
-- README.md
+    docker run ertugerata/pisi-chroot-farm pisi info 'foo'
