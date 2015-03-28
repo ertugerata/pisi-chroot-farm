@@ -4,11 +4,10 @@ MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
 
 WORKDIR /root
 
+RUN rm /run/dbus/pid
+RUN rm /run/dbus/system_bus_socket
+
 RUN /sbin/start-stop-daemon -b --start  --pidfile /var/run/dbus/pid --exec /usr/bin/dbus-daemon -- --system
-
-RUN pisi rr farm 
-
-RUN pisi ar farm http://farm.pisilinux.org/.nofarm-repo/x86_64/pisi-index.xml.xz --at 2
 
 RUN pisi ur
 
