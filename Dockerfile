@@ -16,7 +16,6 @@ RUN pisi it --ignore-safety --ignore-dependency autoconf \
             automake \
             binutils \
             bison \
-            ccache \
             flex \
             gawk \
             gc \
@@ -26,14 +25,19 @@ RUN pisi it --ignore-safety --ignore-dependency autoconf \
             guile \
             libmpc \
             libtool-ltdl \
+            libtool \
             lzo \
             m4 \
             make \ 
-            mingetty \
             mpfr \
             pkgconfig \ 
             python-iniparse \ 
-            strace \
             yacc
 
 RUN pisi dc
+
+RUN rm -rf /usr/share/man \
+           /usr/share/doc \
+           /usr/share/gtk-doc \
+           /usr/share/locale/[a-d][f-z]* \
+           /usr/share/locale/e[a-m,o-z]* 
