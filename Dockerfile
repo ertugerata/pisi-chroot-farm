@@ -7,6 +7,12 @@ WORKDIR /root
 #RUN rm /run/dbus/system_bus_socket
 RUN /sbin/start-stop-daemon -b --start  --pidfile /var/run/dbus/pid --exec /usr/bin/dbus-daemon -- --system
 
+RUN pisi ar ilker http://manap.se/pisi/pisi-index.xml.xz
+
+RUN pisi ar farm http://farm.pisilinux.org/.nofarm-repo/x86_64/pisi-index.xml.xz --at 2
+
+RUN pisi ar github https://github.com/ertugerata/PisiLinux/raw/Pisi-2.0/pisi-index.xml.xz
+
 RUN pisi ur
 
 RUN pisi it --ignore-safety --ignore-dependency autoconf \
