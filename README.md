@@ -8,7 +8,7 @@ docker base img for packaging
 
     docker pull ertugerata/pisi-chroot-farm
     
-### Run a container with sh
+### Run a container with bash
 
     docker run -it ertugerata/pisi-chroot-farm bash
 
