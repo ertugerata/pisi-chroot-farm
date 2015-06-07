@@ -11,7 +11,7 @@ RUN pisi dc &&  rm -rf /usr/share/man \
                        /usr/share/gtk-doc \
                        /usr/share/locale/[a-d][f-z]* \
                        /usr/share/locale/e[a-m,o-z]* \
-             && pisi ar core https://github.com/pisilinux/core/blob/master/pisi-index.xml.xz \
+             && pisi ar core https://github.com/ertugerata/core/raw/master/pisi-index.xml.xz \
              && pisi ur
 
 WORKDIR /root
