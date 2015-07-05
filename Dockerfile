@@ -2,7 +2,7 @@
 FROM ertugerata/pisi-chroot-base
 MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
 
-RUN service dbus start && pisi cp && pisi ar ilker http://manap.se/pisi/pisi-index.xml.xz \
+RUN service dbus start && pisi cp && pisi ar pisi-2.0 http://ciftlik.pisilinux.org/pisi-2.0/pisi-index.xml.xz \
     && pisi it --ignore-safety --ignore-dependency autoconf autogen automake binutils bison flex gawk gc gcc gnuconfig \
     guile libmpc libtool-ltdl libtool lzo m4 make mpfr pkgconfig yacc glibc-devel && service dbus stop
 
@@ -12,6 +12,6 @@ RUN pisi dc &&  rm -rf /usr/share/man \
                        /usr/share/locale/[a-d][f-z]* \
                        /usr/share/locale/e[a-m,o-z]*
 
-RUN pisi ar core https://github.com/pisilinux/core/raw/master/pisi-index.xml.xz
+RUN pisi ar core https://github.com/pisilinux/core/raw/master/pisi-index.xml.xz && pisi ar main https://github.com/pisilinux/main/raw/master/pisi-index.xml.xz --at 2
 
 WORKDIR /root
