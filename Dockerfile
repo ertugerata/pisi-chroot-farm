@@ -4,7 +4,7 @@ MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
 
 RUN service dbus start && pisi cp && pisi ar pisi-2.0 http://ciftlik.pisilinux.org/pisi-2.0/pisi-index.xml.xz \
     && pisi it --ignore-safety --ignore-dependency autoconf autogen automake binutils bison flex gawk gc gcc gnuconfig \
-    guile libmpc libtool-ltdl libtool lzo m4 make mpfr pkgconfig yacc pisilinux-dev-tools glibc-devel && service dbus stop
+    guile libmpc libtool-ltdl libtool lzo m4 make mpfr pkgconfig yacc chrpath pisilinux-dev-tools glibc-devel && service dbus stop
 
 RUN pisi dc &&  rm -rf /usr/share/man \
                        /usr/share/doc \
