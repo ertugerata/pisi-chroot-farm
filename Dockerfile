@@ -1,5 +1,5 @@
 #ertugerata/pisi-chroot-farm
-FROM ertugerata/pisi-chroot-beta
+FROM pisilinux/pisi-beta
 MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
 
 RUN service dbus start && pisi cp && pisi ar beta http://ciftlik.pisilinux.org/2.0-Beta/pisi-index.xml.xz \
