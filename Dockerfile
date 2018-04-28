@@ -1,6 +1,6 @@
 #ertugerata/pisi-chroot-farm
-FROM pisilinux/pisi-beta
-MAINTAINER Ertuğrul Erata <ertugrulerata@gmail.com>
+FROM ertugerata/pisi_beta
+LABEL maintainer Ertuğrul Erata <ertugrulerata@gmail.com>
 
 RUN service dbus start && pisi cp && pisi ar beta http://ciftlik.pisilinux.org/2.0-Beta.1/pisi-index.xml.xz \
     && pisi it --ignore-safety --ignore-dependency autoconf autogen automake binutils bison flex gawk gc gcc gnuconfig \
