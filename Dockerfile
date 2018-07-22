@@ -2,7 +2,7 @@
 FROM ertugerata/pisi_beta
 LABEL maintainer Ertuğrul Erata <ertugrulerata@gmail.com>
 
-RUN service dbus start && update-ca-certificates && pisi cp && pisi ar beta http://ciftlik.pisilinux.org/2.0-Beta.1/pisi-index.xml.xz \
+RUN service dbus start &&  pisi cp && update-ca-certificates && pisi ar beta http://ciftlik.pisilinux.org/2.0-Beta.1/pisi-index.xml.xz \
     && pisi it --ignore-safety --ignore-dependency autoconf autogen automake binutils bison flex gawk gc gcc gnuconfig \
     guile libmpc libtool-ltdl libtool lzo m4 make mpfr pkgconfig yacc chrpath pisilinux-dev-tools glibc-devel isl && service dbus stop
 
