@@ -15,4 +15,6 @@ RUN pisi dc &&  rm -rf /usr/share/man \
 RUN pisi ar core https://github.com/pisilinux/core/raw/master/pisi-index.xml.xz && \
     pisi ar main https://github.com/pisilinux/main/raw/master/pisi-index.xml.xz --ignore-check --at 2
 
+RUN sed -i 's/build_host = localhost/build_host=farm_yerel/g'   /etc/pisi/pisi.conf
+
 WORKDIR /root
